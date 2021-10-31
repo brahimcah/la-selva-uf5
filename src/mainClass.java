@@ -16,7 +16,6 @@ public class mainClass extends GraphicsProgram {
         background.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         add(background);
-
     }
 
 
