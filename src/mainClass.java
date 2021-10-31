@@ -6,8 +6,8 @@ import java.awt.*;
 
 public class mainClass extends GraphicsProgram {
 
-    public static final int WINDOW_WIDTH = 600;
-    public static final int WINDOW_HEIGHT = 600;
+    public static final int WINDOW_WIDTH = 800;
+    public static final int WINDOW_HEIGHT = 800;
     public static final int REFRESH = 50;
 
     //Indiquem quin volem que sigui el noste fons de pantalla
