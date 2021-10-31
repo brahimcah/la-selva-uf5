@@ -22,7 +22,6 @@ public class mainClass extends GraphicsProgram {
     }
 
 
-
     public void run() {
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         Background();
