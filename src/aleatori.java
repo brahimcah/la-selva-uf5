@@ -1,0 +1,2 @@
+public class aleatori {
+}
