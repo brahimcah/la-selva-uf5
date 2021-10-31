@@ -12,8 +12,6 @@ public class mainClass extends GraphicsProgram {
 
     //Indiquem quin volem que sigui el noste fons de pantalla
     public void Background (){
-
-
         GImage background = new GImage("../resources/background.jpg");
         background.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
