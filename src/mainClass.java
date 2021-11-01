@@ -1,6 +1,6 @@
-import acm.graphics.*;
-import acm.program.*;
-import acm.util.*;
+import acm.graphics.GImage;
+import acm.graphics.GRect;
+import acm.program.GraphicsProgram;
 
 import java.awt.*;
 
@@ -17,7 +17,7 @@ public class mainClass extends GraphicsProgram {
         background.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         add(background);
-        Aleatori numAlt = new Aleatori();
+
     }
 
 
@@ -35,9 +35,9 @@ public class mainClass extends GraphicsProgram {
         rect2.setFilled(true);
         add(rect2);
         add(rect1);
-
+        double la = Math.random()*5+1;
         while(true){
-            rect2.setLocation(rect2.getLocation().getX() + 10, rect2.getLocation().getY());
+            rect2.setLocation(rect2.getLocation().getX() + la, rect2.getLocation().getY() + la);
             pause(REFRESH);
         }
     }
