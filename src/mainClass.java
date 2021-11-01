@@ -1,78 +1,44 @@
-import acm.graphics.GImage;
-import acm.graphics.GRect;
-import acm.program.GraphicsProgram;
+import acm.graphics.*;
+import acm.program.*;
 
 import java.awt.*;
-import java.util.Scanner;
 
 public class mainClass extends GraphicsProgram {
 
-    public static final int WINDOW_WIDTH = 800;
-    public static final int WINDOW_HEIGHT = 800;
     public static final int REFRESH = 50;
 
 
-    //Indiquem quin volem que sigui el noste fons de pantalla
-    public void Background (){
-        GImage background = new GImage("../resources/background.jpg");
-        background.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
-        setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
-        add(background);
-
-    }
-    private static final String NOMS[] = {"Camell1", "Camell2", "Camell3", "Camell4", "Camell5", "Camell6"};
-
-
     public void run() {
-        Aleatori numAlt = new Aleatori();
-        style style = new style();
-
-
-
-        setSize(style.WINDOW_WIDTH, style.WINDOW_HEIGHT);
-        Background();
+        Aleatori al1 = new Aleatori();
+        Aleatori al = new Aleatori();
+        style stl = new style();
+        setSize(stl.WINDOW_WIDTH, stl.WINDOW_HEIGHT);
+        stl.Background();
         addMouseListeners();
         addKeyListeners();
+        GRect rect1 = new GRect(30, 30);
+        rect1.setLocation(300, 300);
+        rect1.setColor(Color.BLUE);
+        GRect rect2 = new GRect(10, 10);
+        rect2.setLocation(300, 300);
+        rect2.setColor(Color.yellow);
+        rect2.setFilled(true);
+        rect1.setFilled(true);
+        add(rect2);
+        add(rect1);
+        Animals san = new Animals();
 
-        double la = Math.random()*5+1;
 
-        Animals camells [] = new Animals[6];
-        //Generem els camells
-        for (int i = 0; i<camells.length; i++){
-
-            Scanner r = null;
-            int quincamell = r.nextInt(5)+1;
-
-            if (quincamell==1){
-                camells[i]= new Animals(NOMS[i]);
-            }
-            else if (quincamell==2){
-                camells[i]= new Animals(NOMS[i]);
-            }
-            else if (quincamell==3){
-                camells[i]=new Animals(NOMS[i]);
-            }
-            else if (quincamell==4){
-                camells[i]=new Animals(NOMS[i]);
-            }
-            else if (quincamell==5){
-                camells[i]=new Animals(NOMS[i]);
-            }}
-
-        int n = 100;
-        add(camells[]);
-
-        //Fem que corrin
-        int j=0;
-        do {
-
-            for (int p = 0; p<50; p++){
-
-                Animals.mou();
-            }
+        while (true) {
+            al1 = new Aleatori();
+            rect2.setLocation(rect2.getLocation().getX() + al.numAleatori(), rect2.getLocation().getY() + al1.numAleatori());
             pause(REFRESH);
+            rect1.setLocation(rect1.getLocation().getX() + al.numAleatori(), rect2.getLocation().getY() + 2);
 
-        }while(j!=3);
+        }
 
-}}}
+
+    }
+}
+
 

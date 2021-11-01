@@ -1,42 +1,16 @@
-import acm.graphics.GImage;
+import acm.graphics.GObject;
+import acm.graphics.GRect;
+import acm.program.GraphicsProgram;
 
-import java.util.Random;
+import java.awt.*;
 
-public class Animals extends GImage{
+public class Animals extends GraphicsProgram {
 
-    private int mida;
-    //Indiquem on es troba la imatge del camell
-    private static String imgPath = "../resources/camell.gif";
-    String nom;
-
-    public Animals(String nom) {
-        super(imgPath);
-        this.nom = nom;
-        this.mida = getMida();
-    }
-
-    //Getters & Setters
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public int getMida() {
-        this.setSize(90, 97);
-        return mida;
-    }
-
-    public void setMida(int mida) {
-        this.mida = mida;
-    }
-
-    public void mou (){
-        Random r = new Random();
-
-        int posicions = r.nextInt(15) + 1;
-        this.setLocation(getX() + 1, getY());
+    public void cria(){
+        GRect rect3 =  new GRect(60,30);
+        rect3.setLocation(150,150);
+        rect3.setColor(Color.red);
+        rect3.setFilled(true);
+        add(rect3);
     }
 }

@@ -9,6 +9,12 @@ public class style  extends GraphicsProgram {
     public static final int WINDOW_HEIGHT = 800;
     public static final int REFRESH = 50;
 
-    public final int WINDOW_WIDTH() {
+    //Indiquem quin volem que sigui el noste fons de pantalla
+    public void Background(){
+        GImage background = new GImage("../resources/background.jpg");
+        background.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+        setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+        add(background);
+
     }
 }
