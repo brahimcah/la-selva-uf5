@@ -34,7 +34,7 @@ public class mainClass extends GraphicsProgram {
 
         Animals camells = new Animals("a");
         double la = Math.random()*5+1;
-        int x =1;
+
         int n = 100;
         camells.getMida();
         camells.setLocation(1,n);
