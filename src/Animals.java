@@ -1,44 +1,27 @@
 import acm.graphics.GImage;
 
-import java.awt.*;
 import java.util.Random;
 
-public class Animals extends GImage {
+public class Animals extends GImage{
 
     private int mida;
     //Indiquem on es troba la imatge del camell
-    private static String imgPath;
+    private static String imgPath = "../resources/camell.gif";
+    String nom;
 
-
-
-    int id;
-
-    public Animals(int id) {
+    public Animals(String nom) {
         super(imgPath);
-        this.id = id;
+        this.nom = nom;
         this.mida = getMida();
-    }
-    public static void img(int id){
-        if(id == 1){
-            imgPath ="../resources/camell.gif";
-        }else if(id == 2){
-            imgPath ="../resources/vaca.gif";
-        }
-        return;
-    }
-
-
-    public Animals(Image image) {
-        super(image);
     }
 
     //Getters & Setters
-    public int getNom() {
-        return id;
+    public String getNom() {
+        return nom;
     }
 
-    public void setNom(int nom) {
-        this.id = nom;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
     public int getMida() {
@@ -53,9 +36,7 @@ public class Animals extends GImage {
     public void mou (){
         Random r = new Random();
 
-        int x = r.nextInt(9);
-        int y = r.nextInt(9);
-        this.setLocation(getX() + x, getY() + y);
+        int posicions = r.nextInt(15) + 1;
+        this.setLocation(getX() + 1, getY());
     }
 }
-

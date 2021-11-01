@@ -23,26 +23,34 @@ public class mainClass extends GraphicsProgram {
 
     public void run() {
         Aleatori numAlt = new Aleatori();
-        Animals camells = new Animals;
+
+
+
 
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         Background();
         addMouseListeners();
         addKeyListeners();
-        GRect rect1 =  new GRect(30,30);
-        rect1.setLocation(300,300);
-        rect1.setColor(Color.BLUE);
-        GRect rect2 =  new GRect(10,10);
-        rect2.setLocation(100,100);
-        rect2.setColor(Color.RED);
-        rect2.setFilled(true);
-        add(rect2);
-        add(rect1);
+
+        Animals camells = new Animals("a");
         double la = Math.random()*5+1;
-        while(true){
-            rect2.setLocation(rect2.getLocation().getX() + numAlt.numAleatori(),
-                    rect2.getLocation().getY() + numAlt.numAleatori());
+        int x =1;
+        int n = 100;
+        camells.getMida();
+        camells.setLocation(1,n);
+        add(camells);
+
+        //Fem que corrin
+        int j=0;
+        do {
+
+            for (int i = 0; i<50; i++){
+
+                camells.mou();
+            }
             pause(REFRESH);
-        }
-    }
-}
+
+        }while(j!=3);
+
+}}
+
