@@ -22,6 +22,9 @@ public class mainClass extends GraphicsProgram {
 
 
     public void run() {
+        Aleatori numAlt = new Aleatori();
+        Animals camells = new Animals;
+
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         Background();
         addMouseListeners();
@@ -37,7 +40,8 @@ public class mainClass extends GraphicsProgram {
         add(rect1);
         double la = Math.random()*5+1;
         while(true){
-            rect2.setLocation(rect2.getLocation().getX() + la, rect2.getLocation().getY() + la);
+            rect2.setLocation(rect2.getLocation().getX() + numAlt.numAleatori(),
+                    rect2.getLocation().getY() + numAlt.numAleatori());
             pause(REFRESH);
         }
     }
